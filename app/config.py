@@ -5,9 +5,9 @@ load_dotenv()
 
 class Config:
 
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-    MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o-mini")
+    MODEL_NAME = os.getenv("MODEL_NAME", "llama3-8b-8192")
 
     REST_COUNTRIES_BASE_URL = "https://restcountries.com/v3.1/name/"
 

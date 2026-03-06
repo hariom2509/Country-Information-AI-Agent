@@ -10,7 +10,11 @@ def fetch_country_data(country: str):
 
     try:
 
-        response = requests.get(url, timeout=Config.REQUEST_TIMEOUT)
+        logger.info(f"Fetching country data for: {country}")
+
+        response = requests.get(url)
+
+        logger.info(f"REST Countries API status: {response.status_code}")
 
         if response.status_code != 200:
             logger.warning(f"Country not found: {country}")
